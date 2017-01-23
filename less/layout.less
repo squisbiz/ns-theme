@@ -1,3 +1,59 @@
-.main-card {
-  
+// main: style.less
+
+.container{
+  .container();
+}
+
+.mainArea{
+  position: relative;
+}
+
+.sidebar{
+
+}
+
+.post{
+  background: #fff;
+
+  &__image{
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__title{
+    padding: 30px 60px 0;
+    margin: 0;
+  }
+
+  &__meta{
+    padding: 0 60px 30px;
+    margin-bottom: -30px;
+  }
+
+  &__content{
+    padding: 0 60px 30px;
+  }
+}
+
+.share{
+  background: @nsGray;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+
+  &__link{
+    display: inline;
+  }
+}
+
+.readNext{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 0 60px;
+  border: 1px solid @nsGray;
+}
+
+.sidebar{
+  border: 1px solid @nsGray;
 }

@@ -8,40 +8,65 @@
 
 <body>
 <header>
-  <nav class="top">
-    <ul class="nav-super">
-      <li><b>NEARSOFT SITES:</b></li>
-    	<li><a href="https://nearsoft.com">Nearsoft</a></li>
-    	<li><a href="https://dojo.nearsoft.com">DojoLIVE!</a></li>
-    	<li><a href="https://ux.nearsoft.com"><strong>UX Team</strong></a></li>
-    	<li><a href="https://academy.nearsoft.com">Academy</a></li>
+  <nav class="navGroup">
+    <ul class="navGlobal">
+      <li class="navGlobal__listItem navGlobal__listitem--label">NEARSOFT SITES:</li>
+    	<li class="navGlobal__listItem"><a  class="navGlobal__link"href="https://nearsoft.com">Nearsoft</a></li>
+    	<li class="navGlobal__listItem"><a  class="navGlobal__link"href="https://dojo.nearsoft.com">DojoLIVE!</a></li>
+    	<li class="navGlobal__listItem"><a  class="navGlobal__link"href="https://ux.nearsoft.com"><strong>UX Team</strong></a></li>
+    	<li class="navGlobal__listItem"><a  class="navGlobal__link"href="https://academy.nearsoft.com">Academy</a></li>
     </ul>
-    
-    <ul class="nav-local">
-    	<li class="logo"><a href="https://nearsoft.com" title="Go to Nearsoft's Homepage"><img src="#" alt="Nearsoft" alt="Nearsoft Brand Logo"></a></li>
-    	<li>Menu item</li>
-    	<li>Menu item 2</li>
-      <li>Another menu item</li>
-    	<li class="search">
-    		<input type="search">
+
+    <ul class="navLocal">
+    	<li class="navLocal__listItem">
+        <div class="navLocal__logo">
+          <a href="https://nearsoft.com" title="Go to Nearsoft's Homepage"><img src="#" alt="Nearsoft" alt="Nearsoft Logo"></a>
+        </div>
+      </li>
+    	<li class="navLocal__listItem"><a href="#" class="navLocal__link">Link 1</a></li>
+    	<li class="navLocal__listItem"><a href="#" class="navLocal__link">Link 2</a></li>
+      <li class="navLocal__listItem"><a href="#" class="navLocal__link">Link 3</a></li>
+    	<li class="navLocal__listItem">
+        <div class="search">
+          <input class="search__text" type="text">
+          <button class="search__button">Search</button>
+        </div>
     	</li>
     </ul>
-<a href="#" class="toggle"><i class="icon-list"></i></a>
   </nav>
 </header>
 
-<div class="layout layout_sidebar">
-  
-<div class="main-card"></div>
+<div class="container">
+  <div class="mainArea">
+    <article class="post">
+      <header>
+        <img src="http://fillmurray.com/1200/500" alt="" class="post__image">
+        <h1 class="post__title">A Bill Murray Post, Gentlemen</h1>
+        <p class="post__meta">By Axel Valdez, March 30, 2017.</p>
+      </header>
+      <div class="post__content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, tempora. Dolore culpa, voluptas est delectus doloremque. Recusandae velit expedita enim id dolores est accusamus neque nam, odit magnam facere dignissimos?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, tempora. Dolore culpa, voluptas est delectus doloremque. Recusandae velit expedita enim id dolores est accusamus neque nam, odit magnam facere dignissimos?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, tempora. Dolore culpa, voluptas est delectus doloremque. Recusandae velit expedita enim id dolores est accusamus neque nam, odit magnam facere dignissimos?</p>
+      </div>
+    </article>
+    <ul class="share">
+      <li class="share__link">Twitter</li>
+      <li class="share__link">Facebook</li>
+      <li class="share__link">LinkedIn</li>
+    </ul>
+    <div class="readNext">
+      <p>Read Next Items</p>
+    </div>
+  </div>
+  <div class="sidebar">
+    <p>Sidebar</p>
+  </div>
+</div>
 
-<div class="share"></div>
-
-<div class="sidebar"></div>
-
-</div><!-- /layout -->
-  
-<footer>
-  
+<footer class="footer">
+  Footer Stuff.
 </footer>
+
 </body>
 </html>

@@ -1,11 +1,39 @@
-@ns-orange: #e54800;
-@ns-gray: #616a74;
-@ns-green: #679000;
-@ns-blue: #1d54b4;
+// main: style.less
+
+// variables
+@nsOrange: #e54800;
+@nsGray: #616a74;
+@nsGreen: #679000;
+@nsBlue: #1d54b4;
+
+@lightGray: lighten(@nsGray, 50%);
+
+// mixins
+.container(@width: 1200px;){
+	padding-right: calc(~"50% - (@{width} / 2)");
+	padding-left: calc(~"50% - (@{width} / 2)");
+	margin-right: auto;
+	margin-left: auto;
+}
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background: @lightGray;
+	line-height: 1.5;
+}
+
+p{
+	margin: 1em 0;
+}
+
+h1, h2, h3{
+	line-height: 1;
 }

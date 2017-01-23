@@ -1,0 +1,56 @@
+// main: style.less
+
+// NAV GROUP ----------------------------------------------------------------------
+
+.navGroup{
+  margin-bottom: 60px;
+}
+
+
+// NAV GLOBAL ----------------------------------------------------------------------
+
+.navGlobal{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .container();
+  line-height: 30px;
+  height: 30px;
+  overflow: hidden;
+
+  &__listItem{
+    float: left;
+    margin-right: 15px;
+  }
+
+  &__link{
+    text-decoration: none;
+  }
+}
+
+
+// NAV LOCAL ----------------------------------------------------------------------
+
+.navLocal{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .container();
+  height: 60px;
+  background: #fff;
+  overflow: hidden;
+
+  &__listItem{
+    float: left;
+    margin-right: 15px;
+
+    &:last-child{
+      float: right;
+      margin-left: 0;
+    }
+
+    &__link{
+      text-decoration: none;
+    }
+  }
+}
