@@ -1,0 +1,52 @@
+// main: style.less
+
+.readNext{
+  margin-top: 30px;
+  padding: 0 1.5rem;
+
+  &__label{
+    color: @colorGray;
+    text-align: center;
+  }
+
+  &__columns{
+    width: calc(~"100% + 1.5rem");
+    .mixClearFloats;
+  }
+
+  &__column{
+    float: left;
+    width: 50%;
+    padding-right: 1.5rem;
+  }
+
+  &__column:nth-child(3){
+    display: none;
+  }
+
+  &__column:nth-child(4){
+    display: none;
+  }
+}
+
+@media all and (min-width: 700px){
+  .readNext{
+    &__column{
+      float: left;
+      width: 25%;
+      padding-right: 1.5rem;
+    }
+    &__column:nth-child(3){
+      display: block;
+    }
+    &__column:nth-child(4){
+      display: block;
+    }
+  }
+}
+
+@media all and (min-width: 960px){
+  .readNext{
+    padding: 0;
+  }
+}

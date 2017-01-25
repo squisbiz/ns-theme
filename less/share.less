@@ -1,0 +1,75 @@
+// main: style.less
+
+.share{
+  border-top: 1px solid @colorLightGray;
+  background: @colorWhite;
+  text-align: center;
+  padding: 1.5rem;
+  text-align: center;
+
+  &__label{
+    display: inline-block;
+    line-height: 3rem;
+    vertical-align: top;
+    margin: 0 .25rem 0 0;
+  }
+
+  &__list{
+    display: inline-block;
+    list-style: none;
+  }
+
+  &__listItem{
+    float: left;
+    margin: 0 .25rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__link{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    padding-top: 3rem;
+    overflow: hidden;
+    border-radius: 50%;
+    background: @colorGray url();
+
+    &--twitter{
+      background: #00aced url();
+    }
+
+    &--facebook{
+      background: #3b5998 url();
+    }
+
+    &--linkedin{
+      background: #007bb6 url();
+    }
+  }
+}
+
+@media screen and (min-width: 1340px){
+  .share{
+    padding: 0;
+    width: 3rem;
+    position: absolute;
+    top: 0;
+    left: -4.5rem;
+    background: transparent;
+
+    &__label{
+      display: none;
+    }
+
+    &__list{
+      width: 100%;
+    }
+
+    &__link{
+      display: block;
+      width: 100%;
+      border-radius: 0;
+    }
+  }
+}

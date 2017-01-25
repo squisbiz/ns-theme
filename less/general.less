@@ -1,20 +1,59 @@
 // main: style.less
 
-// variables
+// COLOR VARIABLES
 @nsOrange: #e54800;
 @nsGray: #616a74;
 @nsGreen: #679000;
 @nsBlue: #1d54b4;
 
-@lightGray: lighten(@nsGray, 50%);
+@colorGray: #616a74;
+@colorDarkGray: #131a23;
+@colorLightGray: #e0e4e8;
+@colorWhite: #fff;
+@colorAccent: #e54800;
+
+
+// TYPE VARIABLES
+
+@typeMax: 1.728rem;
+@typeBig: 1.2rem;
+@typeBase: 1rem;
+@typeSmall: .833rem;
+@typeTiny: .694rem;
+
 
 // mixins
-.container(@width: 1200px;){
+.mixContainer(@width: 1200px;){
 	padding-right: calc(~"50% - (@{width} / 2)");
 	padding-left: calc(~"50% - (@{width} / 2)");
 	margin-right: auto;
 	margin-left: auto;
 }
+
+.mixClearFloats(){
+	zoom:1;
+  &:before, &:after{ content:""; display:table; }
+  &:after{ clear: both; }
+}
+
+.mixTypeSans(){
+	font-family: "Montserrat", sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mixTypeSerif(){
+	font-family: georgia, serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mixTypeHand(){
+	font-family: "marydale", sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
 
 * {
 	margin: 0;
@@ -23,17 +62,75 @@
 	-moz-box-sizing: border-box;
 }
 
+// HTML ------------------------------------------------------------------------
+
+html{
+	font-size: 15px;
+}
+
+@media screen and (min-width: 600px){
+	html{
+		font-size: 17px;
+	}
+}
+
+// @media screen and (min-width: 768px){
+// 	html{
+// 		font-size: 17px;
+// 	}
+// }
+
+// BODY ------------------------------------------------------------------------
+
 body{
+	.mixTypeSerif();
 	margin: 0;
 	padding: 0;
-	background: @lightGray;
+	background: @colorLightGray;
+	color: @colorDarkGray;
 	line-height: 1.5;
 }
 
 p{
-	margin: 1em 0;
+	margin: 1rem 0;
+
+	&:last-child{
+		margin-bottom: 0;
+	}
 }
 
-h1, h2, h3{
-	line-height: 1;
+// HEADINGS --------------------------------------------------------------------
+
+h1, h2, h3, h4{
+	.mixTypeSans();
+	line-height: 1.2;
+	font-weight: 400;
+	margin: 1rem 0;
+}
+
+h1{
+	font-size: @typeMax;
+}
+
+h2{
+	font-size: @typeBig;
+}
+
+h3{
+	font-size: @typeBase;
+}
+
+// LINKS -----------------------------------------------------------------------
+
+a{
+  color: @colorAccent;
+  text-decoration: none;
+  background-image: linear-gradient(180deg, transparent 90%, @colorAccent 0), linear-gradient(180deg, transparent 90%, @colorLightGray 0);
+  background-size: 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+  transition: background-size .2s ease;
+}
+
+a:hover{
+	background-size: 100% 100%, 100% 100%;
 }

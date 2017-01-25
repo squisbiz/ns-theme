@@ -1,0 +1,40 @@
+// main: style.less
+
+// CARD ------------------------------------------------------------------------
+
+.card{
+  background: @colorWhite;
+  margin-bottom: 1.5rem;
+
+  &__image{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__title{
+    margin: 0;
+    font-size: @typeBase;
+    line-height: 1.5;
+  }
+
+  &__text{
+    margin-top: 0;
+  }
+
+  &__content{
+    padding: 1.5rem;
+  }
+}
+
+.card--small{
+  .card__title{
+    margin: 0;
+    font-size: @typeSmall;
+  }
+
+  .card__content{
+    padding: 1.5rem;
+    font-size: @typeSmall;
+  }
+}
